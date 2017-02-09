@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>State:</strong>
+  <%= @registration_number.state.name %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= @registration_number.name %>
+</p>
+
+<p>
+  <strong>Office:</strong>
+  <%= @registration_number.office %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_registration_number_path(@registration_number) %> |
+<%= link_to 'Back', registration_numbers_path %>

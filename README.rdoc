@@ -1,0 +1,10 @@
+== README
+
+This application is boiler plate code to work with api in rails. The idea behind this is to setup a web service where when the user passes the rto registration number, it will return all the localities the fall into that registration
+
+For Example:
+
+* KA-05 should return {"registration_number" : "KA-05", "main_rto" : "Jayanagar", "localities" : ["Jayanagar 1st block", "Jayanagar 2nd Block", "Basavanagudi", "Chamrajpet"]}
+
+
+<tt>rake doc:app</tt>.

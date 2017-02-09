@@ -1,0 +1,32 @@
+<%= form_for(@registration_number) do |f| %>
+  <% if @registration_number.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@registration_number.errors.count, "error") %> prohibited this registration_number from being saved:</h2>
+
+      <ul>
+      <% @registration_number.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :state_id %><br>
+    <%= f.collection_select :state_id, State.all, :id, :name,prompt: "Select State" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+    <div class="field">
+    <%= f.label :office %><br>
+    <%= f.text_field :office %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

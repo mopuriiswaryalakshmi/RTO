@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+
+<h1> DashBord </h1>
+
+<b> Your Access Token: <%= current_user.access_token %><b><br/>
+
+<b>Request Limit: <%= current_user.request_limit %></b>
+
+<% else %>
+
+<h2> Welcome to RTO API APP </h2>
+
+<% end %>
